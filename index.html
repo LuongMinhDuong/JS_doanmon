@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUẢN LÝ SINH VIÊN HUEIC IT</title>
+    <script src="./js/student.js"></script>
+    <script src="./js/khoa.js"></script>
+    <script src="./js/lop.js"></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="http://www.hueic.edu.vn/"><img src="img/logo.jpg" height="100px" width="100px" alt=""></a>
+            </div>
+            <div class="titlte">TRANG QUẢN LÝ SINH VIÊN HUEIC IT</div>
+        </div>
+        <div class="main">
+            <div class="left" id="input" >
+                <center><h3>Nhập thông tin sinh viên</h3><hr></center>
+                <label for="">Họ và tên</label>
+                <input type="text" id="nameStudent" placeholder="Nhập tên sinh viên">
+                </br></br>
+                <label for="">Mã Sinh viên</label>
+                <input type="text" id="idStudent" placeholder="Nhập mã sinh viên">
+                </br></br>
+                <label for="">Khoa</label>
+                <select name="" id="departmentStudent"></select>
+                </br></br>
+                <label for="">Lớp</label>
+                <select name="" id="classStudent"></select>
+                </br></br>
+                <label for="">Điểm Toán</label>
+                <input type="text" id="mathStudent"placeholder="Nhập điểm Toán">
+                </br></br>
+                <label for="">Điểm Lý</label>
+                <input type="text" id="physicStudent" placeholder="Nhập điểm Lý">
+                </br></br>
+                <label for="">Điểm Hoá</label>
+                <input type="text" id="chemistryStudent" placeholder="Nhập điểm Hóa">
+                </br></br>
+                <button type="submit" id="btnAdd" class="btn-submit">Lưu</button>
+            </div>
+            <div class="left" id ="edit" style="display: none;">
+                <center><h3>Chỉnh sửa</h3><hr></center>
+                <label for="">Họ và tên</label>
+                <input type="text" id="nameEditStudent">
+                </br></br>
+                <label for="">Mã Sinh viên</label>
+                <input type="text" id="idEditStudent">
+                </br></br>
+                <label for="">Lớp</label>
+                <select name="" id="classEditStudent"></select>
+                </br></br>
+                <label for="">Khoa</label>
+                <select name="" id="departmentEditStudent"></select>
+                </br></br>
+                <label for="">Toán</label>
+                <input type="text" id="mathEditStudent">
+                </br></br>
+                <label for="">Lý</label>
+                <input type="text" id="physicEditStudent">
+                </br></br>
+                <label for="">Hoá</label>
+                <input type="text" id="chemistryEditStudent">
+                </br></br>
+                <button type="submit" id="btnEdit" onclick="updateStd()" class="btn-submit">Lưu lại</button>
+            </div>
+            <div class="center">
+                <div class="center-top">
+                    <div class="avatar"></div>
+                    <div class="add-group">
+                        <i class="fas fa-user-plus" style="color: rgb(17, 15, 179);"></i>
+                            <input type="text" id="tenKhoa" placeholder="Nhập tên Khoa">
+                            <button id="themKhoa" onclick="addkhoa()">Add</button>
+                        <i class="fas fa-user-plus" style="color: rgb(221, 3, 3);"></i>
+                        <input type="text" id="tenLop" placeholder="Nhập tên Lớp">
+                        <button id="themLop" onclick="addlop()">Add</button>
+                    </div>
+                    <div class="search">
+                        <i class="fas fa-search" style="color: goldenrod;"></i>
+                        <input type="text" id="search" placeholder="Tìm kiếm theo Tên">
+                        <button id = "btn-searchKhoa" onclick="search()">Tên</button>
+                        <i class="fas fa-search"></i>
+                        <select name="" id="searchKhoa"></select>
+                        <button onclick="searchKhoa()">Khoa</button>
+                        <i class="fas fa-search" style="color: rgb(160, 0, 253);"></i>
+                        <select name="" id="searchLop"></select>
+                        <button id = "btn-searchLop" onclick="searchLop()">Lớp</button>
+                    </div>
+                </div>
+                <div class="center-bottom">
+                    <table class="table" id="display" width="900" border="1"></table>
+                </div>
+
+            </div>
+            <div class="right">
+                <a href="http://www.hueic.edu.vn/"><img src="img/cdcn.jpg" alt="Logo CDCN" height="150px" width="230px"></a>
+                <center><b>Trường Cao Đẳng Công Nghiệp Huế</b></center><hr>
+                <li>Địa chỉ: 70 Nguyễn Huệ, Huế</li>
+                <li>ĐT: +84-0234-3822813</li>
+                <li>Fax: +84-0234-3845934</li>
+                <li>Email: cnhue@hueic.edu.vn</li>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="text">
+                <p><b>Liên hệ với tôi qua:</b></p><hr>
+                <i class="fas fa-map-marker-alt" style="color: crimson; width: 17px;"></i>
+                Địa chỉ: Ngự Bình, Huế<br>
+                <i class="fas fa-phone" style="color: rgb(23, 155, 18);"></i>
+                Số điện thoại: +23 456 78910 JQKA<br>
+                <i class="fas fa-envelope" style="color: rgb(236, 215, 22);"></i>
+                Email: Duong40541@gmail.com<br>
+                <i class="fab fa-facebook" style="color: rgb(14, 157, 223);"></i>
+                <a href="https://www.facebook.com/minhduong.2710" class="link">Fackbook: Fackbook.com/minhduong.2710</a>
+            </div>
+    </div>
+    </div>    
+</body>
+</html>

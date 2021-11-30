@@ -1,0 +1,187 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+/* Header */
+.header{
+    height: 100px;
+    display: flex;
+    background-image: url('../img/bgr.jpg');
+    background-size: cover;
+}
+.logo{
+   flex: 1;
+}
+.titlte{
+    flex: 7;
+    font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(228, 188, 10);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main */
+.main{
+    display: flex;
+    background-image: url('../img/nen.jpeg');
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+/* Left */
+.left{
+    height: 500px;
+    width: 250px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 20px;
+}
+
+#departmentStudent{
+    margin-left: 20px;
+    height: 23px;
+    width: 170px;
+}
+
+#departmentEditStudent{
+    margin-left: 20px;
+    height: 23px;
+    width: 170px;
+}
+
+#classStudent{
+    margin-left: 20px;
+    height: 23px;
+    width: 170px; 
+}
+
+#classEditStudent{
+    margin-left: 20px;
+    height: 23px;
+    width: 170px; 
+}
+
+div.left h3{
+    margin-top: 0px;
+}
+div.left label{
+    width: 300px;
+    float: left;
+    margin-left: 20px;
+}
+div.left input{
+    margin-left: 20px;
+}
+.btn-submit{
+    margin-left: 20px;
+}
+/* Right */
+.center{
+    width: 900px;
+    margin: 20px 20px 20px 5px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.avatar{
+    background-image: url('../img/fcbar.gif');
+    height: 70px;
+    width: 100px;
+    margin-left: 22.5px;
+    margin-top: 10px;
+    margin-bottom: -80px;
+}
+
+.add-group{
+    margin-top: 10px;
+    margin-left: 150px;
+}
+
+#tenKhoa{
+    width: 150px;
+}
+
+#tenLop{
+    width: 156px;
+}
+
+
+.table{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    background-image: url('../img/team.jpg');
+    width: 900px;
+    background-size: cover;
+}
+
+.trangthai{
+   display: flex;
+   justify-content: space-evenly;
+   align-content: center;
+}
+
+button{
+    border: #ccc;
+    border-radius: 10px;
+    background-image: url('../img/barca.jpg');
+    height: 30px;
+    width: 70px;
+    color: white;
+}
+
+#search{
+    width: 150px;
+}
+
+#searchKhoa{
+    width: 170px;
+    height: 23px;
+}
+
+#searchLop{
+    width: 120px;
+    height: 23px;
+}
+
+.search{
+    float: right;
+    margin: 10px 10px;
+}
+
+
+div.search button{
+    background-color: #3109e0;
+    color: rgb(248, 241, 241);
+}
+
+.right{
+    height: 500px;
+    width: 250px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 20px 10px 10px 10px; 
+}
+
+/* Footer */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgb(41, 40, 40);
+    flex-direction: row;
+    height: 150px;
+}
+
+.text{
+    margin-left: 30px;
+    color: rgb(255, 255, 255);
+}
+.text-right{
+    margin: 2px 2px 2px 2px;
+    text-align: justify;
+}
+
+.link{
+    color: rgb(255, 255, 255);
+}
